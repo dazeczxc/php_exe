@@ -86,37 +86,38 @@
   <p>Result:</p>
 
   <div class="codeBg">
-  <?php
-    function generateTable() {
-      echo '<table>';
-      // Loop for creating the rows
-      for ($rowIndex = 1; $rowIndex <= 4; $rowIndex++) {
-          echo "<tr>";
-          // Loop for creating the columns
-          for ($colIndex = 1; $colIndex <= 5; $colIndex++) {
-              // Generating a random character between 'a' and 'k'
-              $randomCharacter = chr(rand(97, 107));
-              // Getting the ASCII value of the character
-              $asciiValue = ord($randomCharacter);
-              // Checking if the ASCII value is even
-              if ($asciiValue % 2 == 1) {
-                  // Highlighting even characters
-                  echo "<td bgcolor='#cccc00'>$randomCharacter</td>";
-              } else {
-                  echo "<td>$randomCharacter</td>";
-              }
-          }
-          echo "</tr>";
+    <?php
+      function generateTable() {
+        echo '<table>';
+        // Loop for creating the rows
+        for ($rowIndex = 1; $rowIndex <= 4; $rowIndex++) {
+            echo "<tr>";
+            // Loop for creating the columns
+            for ($colIndex = 1; $colIndex <= 5; $colIndex++) {
+                // Generating a random character between 'a' and 'k'
+                $randomCharacter = chr(rand(97, 107));
+                // Getting the ASCII value of the character
+                $asciiValue = ord($randomCharacter);
+                // Checking if the ASCII value is even
+                if ($asciiValue % 2 == 1) {
+                    // Highlighting even characters
+                    echo "<td bgcolor='#cccc00'>$randomCharacter</td>";
+                } else {
+                    echo "<td>$randomCharacter</td>";
+                }
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
       }
-      echo "</table>";
-    }
-    
-    // Check if the random button has been clicked
-    if(isset($_POST['random'])){
-      generateTable();
-    }
-  ?>
+      
+      // Check if the random button has been clicked
+      if(isset($_POST['random'])){
+        generateTable();
+      }
+    ?>
   </div>
+  
   <form method="post" action="">
     <input class="generateButton" type="submit" name="random" value="Generate characters" >
   </form>
