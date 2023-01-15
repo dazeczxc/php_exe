@@ -85,6 +85,7 @@
 <div class="answer">
   <p>Result:</p>
 
+  <div class="codeBg">
   <?php
     function generateTable() {
       echo '<table>';
@@ -109,13 +110,13 @@
       }
       echo "</table>";
     }
-
+    
     // Check if the random button has been clicked
     if(isset($_POST['random'])){
       generateTable();
     }
   ?>
-
+  </div>
   <form method="post" action="">
     <input class="generateButton" type="submit" name="random" value="Generate characters" >
   </form>
