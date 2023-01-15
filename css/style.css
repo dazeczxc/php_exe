@@ -136,6 +136,10 @@ input[type=text] {
     border-radius: 4px;
 }
 
+input[type=text]:focus, input[type=text]:hover{
+    outline: 2px solid #2AFADF;
+ }
+
 table{
     border-collapse: collapse;
     font-size: 20px;
