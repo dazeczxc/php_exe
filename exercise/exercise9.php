@@ -48,14 +48,7 @@
 <div class="answer">
   <p>Result:</p>
 
-  <form method="post">
-    <input type="text" name="length" required placeholder="length"><br>
-    <input type="text" name="width" required placeholder="width"><br>
-    <input type="submit" class="generateButton" name="createGrid" value="Create Grid">
-  </form>
-
   <div class="codeBg">
-     
 
     <?php
       // Function to create grid
@@ -100,8 +93,13 @@
 
     ?>
     
-     
   </div>
+
+  <form method="post">
+    <input type="text" name="length" required placeholder="length"> 
+    <input type="text" name="width" required placeholder="width"><br>
+    <input type="submit" class="generateButton" name="createGrid" value="Create Grid">
+  </form>
 
 </div>
 
