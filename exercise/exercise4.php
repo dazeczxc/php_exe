@@ -21,35 +21,37 @@
 <div class="answer">
     <p>Result:</p>
 
-    <?php
-        echo "<table>";
-        
-        // Loop for creating the rows
-        for ($rowIndex = 1; $rowIndex <= 6; $rowIndex++) { 
-            // Output the table row with no border
-            echo "<tr style='border: none'>";
-            // Output the current row index
-            echo "<td style='border: none'>".$rowIndex."</td>";
-            // Calculate the first multiplication
-            $firstMultiplication = $rowIndex*($rowIndex+1);
-            // Output the first multiplication
-            echo "<td style='border: none'>".$firstMultiplication. "</td>";
-            // Calculate the second multiplication
-            $secondMultiplication = $firstMultiplication*($rowIndex+1);
-            // Output the second multiplication
-            echo "<td style='border: none'>".$secondMultiplication. "</td>";
-            // Calculate the third multiplication
-            $thirdMultiplication = $secondMultiplication*($rowIndex+1);
-            // Output the third multiplication
-            echo "<td style='border: none'>".$thirdMultiplication. "</td>";
-            // Calculate the fourth multiplication
-            $fourthMultiplication = $thirdMultiplication*($rowIndex+1);
-            // Output the fourth multiplication
-            echo "<td style='border: none'>".$fourthMultiplication. "</td>";
-            echo "</tr>";
-        }
-        echo "</table>";
-    ?>
+    <div class="codeBg">
+        <?php
+            echo "<table>";
+            
+            // Loop for creating the rows
+            for ($rowIndex = 1; $rowIndex <= 6; $rowIndex++) { 
+                // Output the table row with no border
+                echo "<tr style='border: none'>";
+                // Output the current row index
+                echo "<td style='border: none'>".$rowIndex."</td>";
+                // Calculate the first multiplication
+                $firstMultiplication = $rowIndex*($rowIndex+1);
+                // Output the first multiplication
+                echo "<td style='border: none'>".$firstMultiplication. "</td>";
+                // Calculate the second multiplication
+                $secondMultiplication = $firstMultiplication*($rowIndex+1);
+                // Output the second multiplication
+                echo "<td style='border: none'>".$secondMultiplication. "</td>";
+                // Calculate the third multiplication
+                $thirdMultiplication = $secondMultiplication*($rowIndex+1);
+                // Output the third multiplication
+                echo "<td style='border: none'>".$thirdMultiplication. "</td>";
+                // Calculate the fourth multiplication
+                $fourthMultiplication = $thirdMultiplication*($rowIndex+1);
+                // Output the fourth multiplication
+                echo "<td style='border: none'>".$fourthMultiplication. "</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+        ?>
+    </div>
 
 </div>
 
