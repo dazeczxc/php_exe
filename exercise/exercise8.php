@@ -50,7 +50,6 @@
                     echo '</div>';
                 } else {
                     echo '<div class="bgPaddings">';
-                    echo "Stack: ";
                     foreach($stackArray as $val){
                         echo $val." ";
                     }
