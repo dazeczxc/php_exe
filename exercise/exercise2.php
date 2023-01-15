@@ -25,6 +25,7 @@
 <div class="answer">
   <p>Result:</p>
 
+  <div class="codeBg">
   <?php
 
     echo "<pre>";
@@ -63,6 +64,7 @@
     echo " </pre>";
     
   ?>
+  </div>
 
 </div>
 
