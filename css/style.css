@@ -97,19 +97,18 @@ body {
     color: white;
 }
 
+.formContainer{
+    display: flex;
+    flex-direction: row;
+}
+
 .pushButton{
     margin: 5px;
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
-    background-color: #ffb703;
+    background-color: #006680;
     color: white;
-}
-
-
-.formContainer{
-    display: flex;
-    flex-direction: row;
 }
 
 .pushButton:hover{
@@ -122,13 +121,13 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
-    background-color: red;
-    color: white;
+    background-color: #ffff00;
+    color: #000;
 }
 
 .popButton:hover{
-    background-color: yellow;
-    color: white;
+    background-color: #e6e600;
+     
 }
 
 input[type=text] {
