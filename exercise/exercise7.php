@@ -75,14 +75,16 @@
 
     ?>
 
-    <form method="post" action="">
-        <input type="text"  name="push_val" placeholder="integer" required>
-        <input type="submit" class="pushButton" name="push_btn" value="Push" >
-     </form>
+    <div class="formContainer">
+        <form method="post" action="">
+            <input type="text"  name="push_val" placeholder="integer" required>
+            <input type="submit" class="pushButton" name="push_btn" value="Push" >
+        </form>
 
-    <form method="post" action="">
-         <input type="submit" class="popButton" name="pop_btn" value="Pop">
-    </form>
+        <form method="post" action="">
+            <input type="submit" class="popButton" name="pop_btn" value="Pop">
+        </form>
+    </div>
 
 </div>
 
