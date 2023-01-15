@@ -112,9 +112,8 @@ body {
 }
 
 .pushButton:hover{
-    background-color: yellow;
-    color: white;
-}
+    background-color: #007a99;
+ }
 
 .popButton{
     margin: 5px;
