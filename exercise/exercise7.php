@@ -77,7 +77,7 @@
 
     <div class="formContainer">
         <form method="post" action="">
-            <input type="text"  name="push_val" placeholder="integer" required>
+            <input type="text"  name="push_val" placeholder="input" required>
             <input type="submit" class="pushButton" name="push_btn" value="Push" >
         </form>
 
