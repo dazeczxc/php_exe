@@ -21,6 +21,7 @@
 <div class="answer">
     <p>Result:</p>
  
+    <div class="codeBg">
     <?php
         echo "<table>";
         // loop through each row
@@ -61,6 +62,7 @@
         }
         echo "</table>";
     ?>
+    </div>
 
 </div>
 
