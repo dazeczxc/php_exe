@@ -22,7 +22,7 @@
 
         <?php
             session_start();
-            
+
             // Function to add a value to the stack array
             function addValueToArray($stackArray, $value) {
                 $stackArray[] = $value;
