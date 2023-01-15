@@ -51,7 +51,7 @@ body {
 }
 
 .question {
-    background: linear-gradient(135deg, #1f8aad, #3cb4dd);
+    background: linear-gradient(135deg, #1f8aad, #26acd9);
 
     color: #fff;
     padding: 20px;
@@ -59,7 +59,7 @@ body {
 }
 
 .answer {
-    background-color: #3cb4dd;
+    background-color: #26acd9;
     color: #fff;
     padding: 20px;
     flex: 40%;
