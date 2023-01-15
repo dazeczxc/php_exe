@@ -32,21 +32,20 @@ function bubbleSort($lists) {
     <div class="codeBg">
         <pre>
 
-function bubbleSort($lists) {
-    $length = count($lists);
-    
-    for ($parent = 0; $parent < $length; $parent++) {
-        for ($child = 0; $child < $length - $parent - 1; $child++) {
-            if ($lists[$child] > $lists[$child + 1]) {
-                $temp = $lists[$child]; //error 1: fixing here, swapping the current element with the next one
-                $lists[$child] = $lists[$child + 1];
-                $lists[$child + 1] = $temp;
+    function bubbleSort($lists) {
+        $length = count($lists);
+        
+        for ($parent = 0; $parent < $length; $parent++) {
+            for ($child = 0; $child < $length - $parent - 1; $child++) {
+                if ($lists[$child] > $lists[$child + 1]) {
+                    $temp = $lists[$child]; //error 1: fixing here, swapping the current element with the next one
+                    $lists[$child] = $lists[$child + 1];
+                    $lists[$child + 1] = $temp;
+                }
             }
         }
+        return $lists; // error 2: returning the sorted array
     }
-    return $lists; // error 2: returning the sorted array
-}
-
         </pre>
     </div>
     <?php
