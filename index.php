@@ -2,11 +2,11 @@
     session_start();
     $_SESSION['my_array'] = array();
     $_SESSION['my_array2'] = array();
-    
+
     include_once('header.php');
 ?>
     
-<h1>EXERCISE</h1>
+<h1>EXERCISES</h1>
 
 <a href="exercise/exercise1.php" class="square">
     <p> Create the given pattern (Diamond)</p>
