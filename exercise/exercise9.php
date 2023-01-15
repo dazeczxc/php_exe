@@ -46,7 +46,7 @@
 </div>
 
 <div class="answer">
-  <p>Result:</p>
+  <p style="margin: 0">Result:</p>
 
   <div class="codeBg">
 

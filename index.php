@@ -1,14 +1,8 @@
 <?php
     session_start();
-
-    if(!isset($_SESSION['my_array'])){
-        $_SESSION['my_array'] = array();
-    }
-
-    if(!isset($_SESSION['my_array'])){
-        $_SESSION['my_array2'] = array();
-    }
-
+    $_SESSION['my_array'] = array();
+    $_SESSION['my_array2'] = array();
+    
     include_once('header.php');
 ?>
     

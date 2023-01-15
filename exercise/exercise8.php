@@ -15,11 +15,10 @@
 </div>
 
 <div class="answer">
-    <p>Result:</p>
+    <p style="margin: 0">Result:</p>
 
     <div class="codeBg">
         
-
         <?php
             session_start();
 
@@ -80,7 +79,7 @@
                     displayStack($_SESSION['my_array2']);
                 }
             }
-
+            
         ?>
 
     </div>
