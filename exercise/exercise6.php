@@ -54,6 +54,8 @@
 <div class="answer">
     <p>Result:</p>
 
+    <div class="codeBg">
+
     <?php
         function createTable() {
             $table = array();
@@ -104,6 +106,8 @@
         }
     ?>
 
+    </div>
+    
     <form method="post" action="">
         <input class="generateButton" type="submit" name="random" value="Generate numbers" >
      </form>
