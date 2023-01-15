@@ -28,7 +28,9 @@ function bubbleSort($lists) {
 
 <div class="answer">
     <p>Result:</p>
-    <pre>
+
+    <div class="codeBg">
+        <pre>
 
 function bubbleSort($lists) {
     $length = count($lists);
@@ -45,8 +47,8 @@ function bubbleSort($lists) {
     return $lists; // error 2: returning the sorted array
 }
 
-    </pre>
-
+        </pre>
+    </div>
     <?php
         function bubbleSort($lists) {
             $length = count($lists);
