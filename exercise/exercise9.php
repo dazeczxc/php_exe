@@ -55,48 +55,52 @@
   </form>
 
   <div class="codeBg">
+     
 
-  <?php
-    // Function to create grid
-    function create_grid($length, $width) {
-      // Create the grid with given length and width
-      $grid = array();
-      for ($rowIndex = 0; $rowIndex < $length; $rowIndex++) {
-          for ($colIndex = 0; $colIndex < $width; $colIndex++) {
-              $random_char = chr(rand(97,122)); //generating a random lowercase letter
-              // check if the letter is a vowel
-              if(preg_match('/^[aeiou]$/i',$random_char)){
-                  // if it is a vowel replace it with a random consonant
-                  $random_char = chr(rand(97,122));
-                  while(preg_match('/^[aeiou]$/i',$random_char)) {
-                      $random_char = chr(rand(97,122));
-                  }
-              }
-              $grid[$rowIndex][$colIndex] = $random_char;
-          }
+    <?php
+      // Function to create grid
+      function create_grid($length, $width) {
+        // Create the grid with given length and width
+        $grid = array();
+        for ($rowIndex = 0; $rowIndex < $length; $rowIndex++) {
+            for ($colIndex = 0; $colIndex < $width; $colIndex++) {
+                $random_char = chr(rand(97,122)); //generating a random lowercase letter
+                // check if the letter is a vowel
+                if(preg_match('/^[aeiou]$/i',$random_char)){
+                    // if it is a vowel replace it with a random consonant
+                    $random_char = chr(rand(97,122));
+                    while(preg_match('/^[aeiou]$/i',$random_char)) {
+                        $random_char = chr(rand(97,122));
+                    }
+                }
+                $grid[$rowIndex][$colIndex] = $random_char;
+            }
+        }
+
+        echo '<div class="bgPaddings">';
+        // Display the grid in a table
+        echo "<table>";
+        for ($rowIndex = 0; $rowIndex < $length; $rowIndex++) {
+            echo "<tr>";
+            for ($colIndex = 0; $colIndex < $width; $colIndex++) {
+                echo "<td>".$grid[$rowIndex][$colIndex]."</td>";
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
+        echo '</div>';
+      }
+      
+      // Check if the button has been clicked
+      if(isset($_POST['createGrid'])){
+        $length = $_POST["length"];
+        $width = $_POST["width"];
+        create_grid($length, $width);
       }
 
-      // Display the grid in a table
-      echo "<table>";
-      for ($rowIndex = 0; $rowIndex < $length; $rowIndex++) {
-          echo "<tr>";
-          for ($colIndex = 0; $colIndex < $width; $colIndex++) {
-              echo "<td>".$grid[$rowIndex][$colIndex]."</td>";
-          }
-          echo "</tr>";
-      }
-      echo "</table>";
-    }
+    ?>
     
-    // Check if the button has been clicked
-    if(isset($_POST['createGrid'])){
-      $length = $_POST["length"];
-      $width = $_POST["width"];
-      create_grid($length, $width);
-    }
-
-  ?>
-
+     
   </div>
 
 </div>

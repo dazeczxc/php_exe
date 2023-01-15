@@ -17,63 +17,75 @@
 <div class="answer">
     <p>Result:</p>
     
-    <?php
-        session_start();
+    <div class="codeBg">
         
-        // Function to add a value to the stack array
-        function addValueToArray($stackArray, $value) {
-            $stackArray[] = $value;
-            return $stackArray;
-        }
 
-        // Function to remove a value to the stack array
-        function removeTopValue($stackArray) {
-            unset($stackArray[count($stackArray)-1]);
-            $newArray = array_values($stackArray);
-            return $newArray;
-        }
+        <?php
+            session_start();
+            
+            // Function to add a value to the stack array
+            function addValueToArray($stackArray, $value) {
+                $stackArray[] = $value;
+                return $stackArray;
+            }
 
-        //Function to check array length
-        function checkStackLength($stackArray) {
-            return count($stackArray);
-        }
+            // Function to remove a value to the stack array
+            function removeTopValue($stackArray) {
+                unset($stackArray[count($stackArray)-1]);
+                $newArray = array_values($stackArray);
+                return $newArray;
+            }
 
-        //Function to dislay the stack content
-        function displayStack($stackArray) {
-            if (count($stackArray) == 0) {
-                echo 'Stack is empty';
-            } else {
-                echo "Stack: ";
-                foreach($stackArray as $val){
-                    echo $val." ";
+            //Function to check array length
+            function checkStackLength($stackArray) {
+                return count($stackArray);
+            }
+
+            //Function to dislay the stack content
+            function displayStack($stackArray) {
+                if (count($stackArray) == 0) {
+                    echo '<div class="bgPaddings">';
+                    echo 'Stack is empty';
+                    echo '</div>';
+                } else {
+                    echo '<div class="bgPaddings">';
+                    echo "Stack: ";
+                    foreach($stackArray as $val){
+                        echo $val." ";
+                    }
+                    echo '</div>';
                 }
             }
-        }
 
-         // Check if the push button has been clicked
-        if(isset($_POST['push_btn'])){
-            // Add the value entered in the text field to the my_array session variable
-            $_SESSION['my_array'] = addValueToArray($_SESSION['my_array'], $_POST['push_val']);
-            // Display the updated stack
-            displayStack($_SESSION['my_array']);
-         }
-
-          // Check if the pop button has been clicked
-        if(isset($_POST['pop_btn'])){
-            // Check if the stack is empty
-            if (checkStackLength($_SESSION['my_array']) == 0) {
-                echo 'Stack is empty';
-            } else {
-                // Remove the top value from the stack
-                $new_array = removeTopValue($_SESSION['my_array']);
-                // Updates the session array with the updated stack array
-                $_SESSION['my_array'] = $new_array;
+            // Check if the push button has been clicked
+            if(isset($_POST['push_btn'])){
+                // Add the value entered in the text field to the my_array session variable
+                $_SESSION['my_array'] = addValueToArray($_SESSION['my_array'], $_POST['push_val']);
                 // Display the updated stack
                 displayStack($_SESSION['my_array']);
             }
-        }
 
-    ?>
+            // Check if the pop button has been clicked
+            if(isset($_POST['pop_btn'])){
+                // Check if the stack is empty
+                if (checkStackLength($_SESSION['my_array']) == 0) {
+                    echo '<div class="bgPaddings">';
+                    echo 'Stack is empty';
+                    echo '</div>';
+                } else {
+                    // Remove the top value from the stack
+                    $new_array = removeTopValue($_SESSION['my_array']);
+                    // Updates the session array with the updated stack array
+                    $_SESSION['my_array'] = $new_array;
+                    // Display the updated stack
+                    displayStack($_SESSION['my_array']);
+                }
+            }
+
+        ?>
+
+         
+    </div>
 
     <div class="formContainer">
         <form method="post" action="">

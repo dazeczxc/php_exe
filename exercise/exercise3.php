@@ -24,39 +24,41 @@
     <p>Result:</p>
 
     <div class="codeBg">
-        <table>
+        <div class="bgPaddings">
+            <table>
 
-        <?php
+            <?php
 
-            // Loop for creating the rows
-            for ($i = 1; $i <= 5; $i++) {
-                echo "<tr>";
-                // Loop for creating the columns
-                for ($j = 1; $j <= $i; $j++) {
-                    // Multiply the current row and column to get the cell value
-                    $cellValue = $i * $j;
-                    // Output the cell value with no border
-                    echo "<td style='border: none'>" . $cellValue . "&nbsp</td>";
+                // Loop for creating the rows
+                for ($i = 1; $i <= 5; $i++) {
+                    echo "<tr>";
+                    // Loop for creating the columns
+                    for ($j = 1; $j <= $i; $j++) {
+                        // Multiply the current row and column to get the cell value
+                        $cellValue = $i * $j;
+                        // Output the cell value with no border
+                        echo "<td style='border: none'>" . $cellValue . "&nbsp</td>";
+                    }
+                    echo "</tr>";
                 }
-                echo "</tr>";
-            }
 
-            // Loop for creating the rows in reverse order
-            for ($i = 4; $i >= 1; $i--) {
-                echo "<tr>";
-                // Loop for creating the columns
-                for ($j = 1; $j <= $i; $j++) {
-                    // Multiply the current row and column to get the cell value
-                    $cellValue = $i * $j;
-                    // Output the cell value with no border
-                    echo "<td style='border: none'>" . $cellValue . "&nbsp</td>";
+                // Loop for creating the rows in reverse order
+                for ($i = 4; $i >= 1; $i--) {
+                    echo "<tr>";
+                    // Loop for creating the columns
+                    for ($j = 1; $j <= $i; $j++) {
+                        // Multiply the current row and column to get the cell value
+                        $cellValue = $i * $j;
+                        // Output the cell value with no border
+                        echo "<td style='border: none'>" . $cellValue . "&nbsp</td>";
+                    }
+                    echo "</tr>";
                 }
-                echo "</tr>";
-            }
-            
-        ?>
+                
+            ?>
 
-        </table>
+            </table>
+        </div>
     </div>
 
 </div>

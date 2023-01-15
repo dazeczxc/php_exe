@@ -56,58 +56,61 @@
 
     <div class="codeBg">
 
-    <?php
-        function createTable() {
-            $table = array();
-            $randomNumbers = range(1, 100);
-            shuffle($randomNumbers);
+        <?php
+            function createTable() {
+                $table = array();
+                $randomNumbers = range(1, 100);
+                shuffle($randomNumbers);
 
-            // Create a 4x4 table with unique random numbers
-            for ($rowIndex = 0; $rowIndex < 4; $rowIndex++) {
-                for ($colIndex = 0; $colIndex < 4; $colIndex++) {
-                    $table[$rowIndex][$colIndex] = array_pop($randomNumbers);
-                }
-            }
-
-            // Sum up the numbers per column
-            $colSums = array();
-            for ($colIndex = 0; $colIndex < 4; $colIndex++) {
-                $colSums[$colIndex] = 0;
+                // Create a 4x4 table with unique random numbers
                 for ($rowIndex = 0; $rowIndex < 4; $rowIndex++) {
-                    $colSums[$colIndex] += $table[$rowIndex][$colIndex];
+                    for ($colIndex = 0; $colIndex < 4; $colIndex++) {
+                        $table[$rowIndex][$colIndex] = array_pop($randomNumbers);
+                    }
                 }
-            }
 
-            // Sum up the numbers per row
-            $rowSums = array();
-            for ($rowIndex = 0; $rowIndex < 4; $rowIndex++) {
-                $rowSums[$rowIndex] = array_sum($table[$rowIndex]);
-            }
+                // Sum up the numbers per column
+                $colSums = array();
+                for ($colIndex = 0; $colIndex < 4; $colIndex++) {
+                    $colSums[$colIndex] = 0;
+                    for ($rowIndex = 0; $rowIndex < 4; $rowIndex++) {
+                        $colSums[$colIndex] += $table[$rowIndex][$colIndex];
+                    }
+                }
 
-            echo "<table>";
-            for ($rowIndex = 0; $rowIndex < 4; $rowIndex++) {
+                // Sum up the numbers per row
+                $rowSums = array();
+                for ($rowIndex = 0; $rowIndex < 4; $rowIndex++) {
+                    $rowSums[$rowIndex] = array_sum($table[$rowIndex]);
+                }
+
+                echo '<div class="bgPaddings">';
+                echo "<table>";
+                for ($rowIndex = 0; $rowIndex < 4; $rowIndex++) {
+                    echo "<tr>";
+                    for ($colIndex = 0; $colIndex < 4; $colIndex++) {
+                        echo "<td>" . $table[$rowIndex][$colIndex] . "</td>";
+                    }
+                    echo "<td style='border:none'>".$rowSums[$rowIndex]."</td>";
+                    echo "</tr>";
+                }
                 echo "<tr>";
                 for ($colIndex = 0; $colIndex < 4; $colIndex++) {
-                    echo "<td>" . $table[$rowIndex][$colIndex] . "</td>";
+                    echo "<td style='border:none'>".$colSums[$colIndex]."</td>";
                 }
-                echo "<td style='border:none'>".$rowSums[$rowIndex]."</td>";
                 echo "</tr>";
+                echo "</table>";
+                echo '</div>';
             }
-            echo "<tr>";
-            for ($colIndex = 0; $colIndex < 4; $colIndex++) {
-                echo "<td style='border:none'>".$colSums[$colIndex]."</td>";
+            // Check if the random button has been clicked
+            if(isset($_POST['random'])){
+                createTable();
             }
-            echo "</tr>";
-            echo "</table>";
-        }
-        // Check if the random button has been clicked
-        if(isset($_POST['random'])){
-            createTable();
-        }
-    ?>
+        ?>
 
+         
     </div>
-    
+
     <form method="post" action="">
         <input class="generateButton" type="submit" name="random" value="Generate numbers" >
      </form>

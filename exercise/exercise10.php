@@ -30,7 +30,9 @@ function bubbleSort($lists) {
     <p>Result:</p>
 
     <div class="codeBg">
-        <pre>
+        <div class="bgPaddings">
+
+            <pre>
 
     function bubbleSort($lists) {
         $length = count($lists);
@@ -46,8 +48,10 @@ function bubbleSort($lists) {
         }
         return $lists; // error 2: returning the sorted array
     }
-        </pre>
+            </pre>
+        </div>
     </div>
+
     <?php
         function bubbleSort($lists) {
             $length = count($lists);
@@ -72,10 +76,10 @@ function bubbleSort($lists) {
         $input_array = [5, 3, 8, 11, 17, 20, 2, 9, 1];
         $sorted_array = bubbleSort($input_array);
         echo "Example:<br>";
-        echo '<div class="codeBg">';
+        echo '<div class="codeBg"><div class="bgPaddings">';
         echo "Original Array: [".implode(",", $input_array)."]<br>";
         echo "Sorted Array: [".implode(",", $sorted_array)."]";
-        echo "</div>";
+        echo "</div></div>";
     ?>
 </div>
 

@@ -156,7 +156,10 @@ td{
 .codeBg{
     border-radius: 5px;
     background-color: #006680;
-     
+}
+
+.bgPaddings{
+    padding: 10px;
 }
 
 
