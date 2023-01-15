@@ -17,6 +17,8 @@
 <div class="answer">
     <p>Result:</p>
 
+    <div class="codeBg">
+
     <?php
         session_start();
 
@@ -74,6 +76,8 @@
         }
 
     ?>
+
+    </div>
 
     <div class="formContainer">
         <form method="post" action="">

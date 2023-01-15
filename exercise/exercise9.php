@@ -54,6 +54,8 @@
     <input type="submit" class="generateButton" name="createGrid" value="Create Grid">
   </form>
 
+  <div class="codeBg">
+
   <?php
     // Function to create grid
     function create_grid($length, $width) {
@@ -94,6 +96,8 @@
     }
 
   ?>
+
+  </div>
 
 </div>
 

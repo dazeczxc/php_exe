@@ -72,8 +72,10 @@ function bubbleSort($lists) {
         $input_array = [5, 3, 8, 11, 17, 20, 2, 9, 1];
         $sorted_array = bubbleSort($input_array);
         echo "Example:<br>";
+        echo '<div class="codeBg">';
         echo "Original Array: [".implode(",", $input_array)."]<br>";
         echo "Sorted Array: [".implode(",", $sorted_array)."]";
+        echo "</div>";
     ?>
 </div>
 
